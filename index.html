@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="favi.png">
+  <title>Task Manager</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <i style='color:#ffcb9a;margin-right: -30px;margin-left: none;'><img src="logo.png"/></i>
+      <a href="#" class="pro">Listicles</a>
+      <div class="task-input-container" id="topsearch">
+        <input type="text" id="searchInput" placeholder="Enter a keyword" hidden>
+        <div></div>
+        <div id="search-icon" class="search-icon"><i><img src="search.png" alt="Search"/></i></div>
+        <button id="voiceSearchButton" class="search-icon"><img src="voice.png" alt="Voice Search"></button>
+        
+      </div>
+      <!-- <div id="menu-bar"></div> -->
+    </header>
+    <div id="clocks">
+    <div class="box">
+      <h1>Plan of Action</h1>
+      <div class="task-input-container">
+        <label for="taskInput">Task:&nbsp;&nbsp;</label>
+        <input type="text" id="taskInput" placeholder="Enter a new task">
+      </div>
+      <div class="task-input-container">
+        <label for="dueDateInput">Due Date:&nbsp;&nbsp;</label>
+        <input type="date" id="dueDateInput">
+      </div>
+      <div class="task-input-container">
+        <label for="categoryInput" >Category:&nbsp;&nbsp;</label>
+        <select id="categoryInput" >
+          <option value="">select category</option>
+          <option value="Work">Work</option>
+          <option value="Personal">Personal</option>  
+          <option value="Sports">Sports</option>
+          <option value="Shopping">Shopping</option>
+
+        </select>
+      </div>
+      <div class="task-input-container">
+        <button id="addTaskBn">Add Task</button>
+      </div>
+    </div>
+    <div class="clock">
+      <div class="hour-hand" id="hourHand"></div>
+      <div class="minute-hand" id="minuteHand"></div>
+      <div class="second-hand" id="secondHand"></div>
+      <div class="center"></div>
+    </div>
+  </div>
+    <div class="task-input-container sorting" id="hoversort">
+      <p style="margin-right: -50px;margin-left: -60px">Sort By:-</p>
+      <button id="sortDueDate">Due Date</button>
+      <button id="sortCompletionStatus">Completion Status</button>
+      <button id="sortCategory" style="display: none;">Category</button>
+    </div>
+    
+    <div class="task-input-container">
+      <p style="margin-left: -89px;">Filter By:-</p>
+
+      <label for="completionFilter" >Completion Status:</label>
+      <select id="completionFilter">
+        <option value="all">All</option>
+        <option value="complete">Complete</option>
+        <option value="incomplete">Incomplete</option>
+      </select>
+  
+      <label for="categoryFilter">Category:</label>
+      <select id="categoryFilter">
+        <option value="all">All</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Sports">Sports</option>
+        <option value="Shopping">Shopping</option>
+      </select>
+
+      <button id="applyFilters" style="margin-left: -100px;">Apply Filters</button>
+    </div>
+
+    <div class="tasks-container" id="taskList"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+
